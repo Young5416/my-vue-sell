@@ -17,13 +17,30 @@
 </template>
 
 <script>
-import header from './components/header/header.vue'
+  import header from './components/header/header.vue'
+  import { getSeller } from 'api'
 
-export default {
-  components: {
-    'v-header': header
+  export default {
+    name: 'app',
+    data () {
+      return {
+        seller: {}
+      }
+    },
+    created () {
+     this._getSeller()
+    },
+    methods: {
+       _getSeller() {
+        getSeller().then((seller) => {
+          this.seller = seller
+        })
+      }
+    },
+    components: {
+      'v-header': header
+    }
   }
-}
 </script>
 <style lang="stylus">
   @import "./common/stylus/mixin.styl"
