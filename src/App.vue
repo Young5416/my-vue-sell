@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-header></v-header>
+    <v-header :seller="seller"></v-header>
     <div class="tap border-1px">
       <div class="tab-item">
-        <router-link to="goods">商品</router-link>
+        <router-link to="/goods">商品</router-link>
       </div>
       <div class="tab-item">
         <router-link to="/ratings">评论</router-link>
@@ -31,7 +31,7 @@
      this._getSeller()
     },
     methods: {
-       _getSeller() {
+      _getSeller () {
         getSeller().then((seller) => {
           this.seller = seller
         })
