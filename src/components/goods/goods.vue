@@ -1,6 +1,6 @@
 <template>
   <div class="goods">
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" ref="menuWrapper" >
       <ul>
         <li v-for="(item,index) in goods" :key="index" class="menu-item">
            <span class="text">
@@ -9,7 +9,7 @@
         </li>
       </ul>
     </div>
-    <div class="foods-wrapper">
+    <div class="foods-wrapper"  ref="foodsWrapper" >
       <ul>
         <li v-for="(item,index) in goods" class="food-list" :key="index">
           <h1 class="title">{{item.name}}</h1>
@@ -40,6 +40,7 @@
 
 <script>
   import { getGoods } from '../../api'
+  import BScroll from 'better-scroll'
 
   export default {
     name: 'goods',
@@ -61,8 +62,14 @@
       _getGoods: function () {
         getGoods().then((response) => {
           this.goods = response
-          console.log(this.goods)
+          this.$nextTick(() => {
+            this._initScorll()
+          })
         })
+      },
+      _initScorll: function () {
+        this.menuScroll = new BScroll(this.$refs.menuWrapper, {})
+        this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {})
       }
     }
   }
@@ -157,22 +164,29 @@
             line-height: 15px
             font-size: 14px
             color: rgb(7, 17, 27)
+
           .desc, .extra
-            line-height:  10px
+            line-height: 10px
             font-size: 10px
             color: rgb(147, 153, 159)
+
           .desc
+            line-height: 12px
             margin-bottom: 8px
+
           .extra
             .count
               margin-right: 12px
+
           .price
             font-weight: 700
             line-height: 24px
+
             .now
               margin-right: 8px
               font-size: 14px
-              color: rgb(240,20,20)
+              color: rgb(240, 20, 20)
+
             .old
               text-decoration: line-through
               font-size: 10px
