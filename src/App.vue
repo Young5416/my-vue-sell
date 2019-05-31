@@ -12,57 +12,51 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 
 <script>
-  import header from './components/header/header.vue'
-  import { getSeller } from 'api'
+import header from './components/header/header.vue'
+import { getSeller } from 'api'
 
-  export default {
-    name: 'app',
-    data () {
-      return {
-        seller: {}
-      }
-    },
-    created () {
-     this._getSeller()
-    },
-    methods: {
-      _getSeller () {
-        getSeller().then((seller) => {
-          this.seller = seller
-        })
-      }
-    },
-    components: {
-      'v-header': header
+export default {
+  name: 'app',
+  data () {
+    return {
+      seller: {}
     }
+  },
+  created () {
+    this._getSeller()
+  },
+  methods: {
+    _getSeller () {
+      getSeller().then((seller) => {
+        this.seller = seller
+      })
+    }
+  },
+  components: {
+    'v-header': header
   }
+}
 </script>
 <style lang="stylus">
-  @import "./common/stylus/mixin.styl"
-
-  .tap
-    display flex
-    width 100%
-    height 40px
-    line-height 40px
-    border-1px(rgba(7, 17, 27, 0.1))
-
-    .tab-item
-      flex: 1
-
-      text-align: center
-
-      & > a
-        display: block
-        font-size: 14px
-        color: rgb(77, 85, 93)
-
-        &.active
-          color: rgb(240, 20, 20)
-
+@import './common/stylus/mixin.styl'
+.tap
+  display flex
+  width 100%
+  height 40px
+  line-height 40px
+  border-1px(rgba(7, 17, 27, 0.1))
+  .tab-item
+    flex 1
+    text-align center
+    & > a
+      display block
+      font-size 14px
+      color rgb(77, 85, 93)
+      &.active
+        color rgb(240, 20, 20)
 </style>
