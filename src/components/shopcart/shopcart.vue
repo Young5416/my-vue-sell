@@ -16,7 +16,8 @@
         <div class="desc">另需配送费￥{{deliveryPrice}}元 </div>
       </div>
       <div class="content-right">
-        <div class="pay">￥20元起送</div>
+        <div class="pay"
+             :class="payClass">{{payDesc}}</div>
       </div>
     </div>
   </div>
@@ -31,8 +32,8 @@ export default {
       default () {
         return [
           {
-            price: 10,
-            count: 1
+            price: 20,
+            count: 3
           }
         ]
       }
@@ -64,6 +65,25 @@ export default {
         count += food.count
       })
       return count
+    },
+    payDesc () {
+      let result
+      if (this.totalPrice === 0) {
+        result = `￥${this.minPrice}元起送`
+      } else if (this.totalPrice < this.minPrice) {
+        let diff = this.minPrice - this.totalPrice
+        result = `还差￥${diff}元起送`
+      } else {
+        result = `去结算`
+      }
+      return result
+    },
+    payClass () {
+      if (this.totalPrice < this.minPrice) {
+        return 'not-enough'
+      } else {
+        return 'enough'
+      }
     }
   },
   methods: {},
@@ -155,6 +175,10 @@ export default {
         text-align center
         font-size 12px
         font-weight 700
-        background #2b333d
         color rgba(255, 255, 255, 0.4)
+        &.not-enough
+          background #2b333d
+        &.enough
+          background #00b43c
+          color #fff
 </style>
