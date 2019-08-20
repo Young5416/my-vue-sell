@@ -1,0 +1,34 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-20 17:51:26
+ * @LastEditTime: 2019-08-20 18:10:04
+ * @LastEditors: Please set LastEditors
+ */
+export function saveToLocal(id, key, value) {
+    let seller = window.localStorage.__seller__
+    if (!seller) {
+        seller = {}
+        seller[id] = {}
+    } else {
+        seller = JSON.parse(seller)
+        if (!seller[id]) {
+            seller[id] = {}
+        }
+    }
+    seller[id][key] = value
+    window.localStorage.__seller__ = JSON.stringify(seller)
+};
+
+export function loadFromLocal(id, key, def) {
+    let seller = window.localStorage.__seller__
+    if (!seller) {
+        return def
+    }
+    seller = JSON.parse(seller)[id]
+    if (!seller) {
+        return def
+    }
+    let ret = seller[key]
+    return ret || def
+};

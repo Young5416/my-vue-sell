@@ -1,3 +1,10 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-05-16 23:10:36
+ * @LastEditTime: 2019-08-12 08:51:51
+ * @LastEditors: Please set LastEditors
+ -->
 <template>
   <div class="ratings"
        ref="ratings">
@@ -53,7 +60,8 @@
               <div class="recommend"
                    v-show="rating.recommend && rating.recommend.length">
                 <span class="icon-thumb_up"></span>
-                <span class="item" v-for="(item,index) in rating.recommend"
+                <span class="item"
+                      v-for="(item,index) in rating.recommend"
                       :key="index">{{item}}</span>
               </div>
               <div class="time">
