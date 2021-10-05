@@ -667,74 +667,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@better-scroll/core@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/core/download/@better-scroll/core-2.0.0-alpha.4.tgz#b743aad98c089d1ec07c4d80ed7f815cac42c597"
-  integrity sha1-t0Oq2YwInR7AfE2A7X+BXKxCxZc=
-  dependencies:
-    "@better-scroll/shared-utils" "^2.0.0-alpha.4"
-
-"@better-scroll/mouse-wheel@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/mouse-wheel/download/@better-scroll/mouse-wheel-2.0.0-alpha.4.tgz#1a159f410cf08b166160fdd67b77447b9b14b0ab"
-  integrity sha1-GhWfQQzwixZhYP3We3dEe5sUsKs=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/observe-dom@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/observe-dom/download/@better-scroll/observe-dom-2.0.0-alpha.4.tgz#5173f5bb77bb5e2dc253989549dca85e6ca546ae"
-  integrity sha1-UXP1u3e7Xi3CU5iVSdyoXmylRq4=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/pull-down@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/pull-down/download/@better-scroll/pull-down-2.0.0-alpha.4.tgz#f9d5dfc438073406e9fd038e6d10c3246f0571b0"
-  integrity sha1-+dXfxDgHNAbp/QOObRDDJG8FcbA=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/pull-up@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/pull-up/download/@better-scroll/pull-up-2.0.0-alpha.4.tgz#1771a856d1c68854389ef374626ad0d216b3a145"
-  integrity sha1-F3GoVtHGiFQ4nvN0YmrQ0hazoUU=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/scroll-bar@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/scroll-bar/download/@better-scroll/scroll-bar-2.0.0-alpha.4.tgz#d819cccfa1ba4c3791e89d58d8268c96bad1f2b0"
-  integrity sha1-2BnMz6G6TDeR6J1Y2CaMlrrR8rA=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/shared-utils@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.0.0-alpha.4.tgz#8a8b691cc7dd1b18ac6390085f05e1dfa243f886"
-  integrity sha1-iotpHMfdGxisY5AIXwXh36JD+IY=
-
-"@better-scroll/slide@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/slide/download/@better-scroll/slide-2.0.0-alpha.4.tgz#ab4ff1a7991d6c9885dfb1265a14c9265372655d"
-  integrity sha1-q0/xp5kdbJiF37EmWhTJJlNyZV0=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/wheel@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/wheel/download/@better-scroll/wheel-2.0.0-alpha.4.tgz#f4a968f32edcaa66043e545862529bf985668587"
-  integrity sha1-9Klo8y7cqmYEPlRYYlKb+YVmhYc=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
-"@better-scroll/zoom@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/@better-scroll/zoom/download/@better-scroll/zoom-2.0.0-alpha.4.tgz#930485dd3e9a36a5053aff5463eb0362dfa028ad"
-  integrity sha1-kwSF3T6aNqUFOv9UY+sDYt+gKK0=
-  dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
@@ -1650,20 +1582,12 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-better-scroll@^2.0.0-alpha.4:
-  version "2.0.0-alpha.4"
-  resolved "https://registry.npm.taobao.org/better-scroll/download/better-scroll-2.0.0-alpha.4.tgz#f0aab231db4950d57c60c3d464ffbacb26527ee9"
-  integrity sha1-8KqyMdtJUNV8YMPUZP+6yyZSfuk=
+better-scroll@^0.1.7:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/better-scroll/-/better-scroll-0.1.15.tgz#17bd5fc175d2fb422d370163c8ab9e28729b2fc1"
+  integrity sha1-F71fwXXS+0ItNwFjyKueKHKbL8E=
   dependencies:
-    "@better-scroll/core" "^2.0.0-alpha.4"
-    "@better-scroll/mouse-wheel" "^2.0.0-alpha.4"
-    "@better-scroll/observe-dom" "^2.0.0-alpha.4"
-    "@better-scroll/pull-down" "^2.0.0-alpha.4"
-    "@better-scroll/pull-up" "^2.0.0-alpha.4"
-    "@better-scroll/scroll-bar" "^2.0.0-alpha.4"
-    "@better-scroll/slide" "^2.0.0-alpha.4"
-    "@better-scroll/wheel" "^2.0.0-alpha.4"
-    "@better-scroll/zoom" "^2.0.0-alpha.4"
+    babel-runtime "^6.0.0"
 
 better-scroll@~1.12.6:
   version "1.12.6"
@@ -6585,9 +6509,9 @@ querystring@0.2.0:
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npm.taobao.org/querystringify/download/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha1-YOWl/WSn+L+k0qsu1v30yFutFU4=
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -6887,7 +6811,7 @@ require-uncached@^1.0.3:
 
 requires-port@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
 reselect@^3.0.1:
@@ -8032,9 +7956,9 @@ url-loader@^1.1.2:
     schema-utils "^1.0.0"
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.npm.taobao.org/url-parse/download/url-parse-1.4.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Furl-parse%2Fdownload%2Furl-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha1-qKg1NejACjFuQDpdtKwbm4U64ng=
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.3.tgz#71c1303d38fb6639ade183c2992c8cc0686df862"
+  integrity sha512-IIORyIQD9rvj0A4CLWsHkBBJuNqWpFQe224b6j9t/ABmquIS0qDU2pY6kl6AuOrL5OkCXHMCFNe1jBcuAggjvQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
